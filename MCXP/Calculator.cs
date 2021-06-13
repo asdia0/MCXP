@@ -49,5 +49,10 @@
                 }
             }
         }
+
+        public static (int levels, int points) AddXP(int currrentXP, int diff)
+        {
+            return GetLevelsAndPoints(currrentXP + diff);
+        }
     }
 }
