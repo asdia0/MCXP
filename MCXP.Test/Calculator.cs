@@ -68,5 +68,16 @@ namespace MCXP.Test
 
             Assert.AreEqual(1405, actual, $"Received {actual}.");
         }
+
+        [TestMethod]
+        public void XPDiff_Level27to30()
+        {
+            (int, int) currentXP = (27, 0);
+            (int, int) diff = (30, 0);
+
+            long actual = MCXP.Calculator.XPDiff(currentXP, diff);
+
+            Assert.AreEqual(306, actual, $"Received {actual}.");
+        }
     }
 }

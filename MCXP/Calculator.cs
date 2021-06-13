@@ -81,5 +81,10 @@
 
             return (int)((4.5 * levels * levels) - (162.5 * levels) + 2220 + points);
         }
+
+        public static long XPDiff((int levels, int points) currentXP, (int levels, int points) diff)
+        {
+            return LevelsAndPointsToXP(diff.levels, diff.points) - LevelsAndPointsToXP(currentXP.levels, currentXP.points);
+        }
     }
 }
