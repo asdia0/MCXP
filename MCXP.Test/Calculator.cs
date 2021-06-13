@@ -46,5 +46,27 @@ namespace MCXP.Test
 
             Assert.AreEqual((29, 97), actual, $"Received {actual}.");
         }
+
+        [TestMethod]
+        public void LevelsAndPointsToXP_Level30()
+        {
+            int levels = 30;
+            int points = 0;
+
+            long actual = MCXP.Calculator.LevelsAndPointsToXP(levels, points);
+
+            Assert.AreEqual(1395, actual, $"Received {actual}.");
+        }
+
+        [TestMethod]
+        public void LevelsAndPointsToXP_Level30And10Points()
+        {
+            int levels = 30;
+            int points = 10;
+
+            long actual = MCXP.Calculator.LevelsAndPointsToXP(levels, points);
+
+            Assert.AreEqual(1405, actual, $"Received {actual}.");
+        }
     }
 }
