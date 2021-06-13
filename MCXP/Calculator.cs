@@ -54,5 +54,10 @@
         {
             return GetLevelsAndPoints(currrentXP + diff);
         }
+
+        public static (int levels, int points) SubtractXP(int currentXP, int diff)
+        {
+            return GetLevelsAndPoints(currentXP - diff);
+        }
     }
 }
