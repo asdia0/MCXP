@@ -24,5 +24,16 @@ namespace MCXP.Test
 
             Assert.AreEqual((30, 10), actual, $"Received {actual}.");
         }
+
+        [TestMethod]
+        public void AddXP_Level30Plus10()
+        {
+            int experience = 1395;
+            int diff = 10;
+
+            (int, int) actual = MCXP.Calculator.AddXP(experience, diff);
+
+            Assert.AreEqual((30, 10), actual, $"Received {actual}.");
+        }
     }
 }
